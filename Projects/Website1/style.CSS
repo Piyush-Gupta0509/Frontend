@@ -1,0 +1,64 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    margin-left: 2rem;
+    font-weight: 800;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4vw;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+    margin-left: 2vw;
+    font-size: 1.5rem;
+
+}
+
+img[src="./images/lap.jpeg"]{
+    width: 94vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.Skills{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Skills>div{
+    margin-left: 2vw;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: lightskyblue;
+}
+
+
+.Footer{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
