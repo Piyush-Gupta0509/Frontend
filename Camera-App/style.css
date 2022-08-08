@@ -18,6 +18,7 @@ video{
     width:100%;
 }
 .action-cont{
+    /* border: 2px solid red; */
     height: 12rem;
     width: 5rem;
     /* background-color: blue; */
@@ -54,7 +55,7 @@ video{
 
 .timer-cont{
     position: absolute;
-    bottom:10rem;
+    bottom:7rem;
     left: 3rem;
     color: white;
 }
@@ -106,6 +107,8 @@ video{
 
 .gallery:hover{
     cursor: pointer;
+    color: lightpink;
+    transition: 0.5s;
 }
 
 
