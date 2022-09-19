@@ -4,39 +4,66 @@ export default class Todo extends Component {
   constructor() {
     super();
     this.state = {
-      tasks: ["Revise Js", "Revise DSA"],
-      currtask:"",
+      tasks: [
+        { id: 1, task: "Revise JS" },
+        { id: 2, task: "Revise DSA" },
+      ],
+      currtask: "",
     };
   }
 
-  handleChanges=(e)=>{
+  handleChanges = (e) => {
     this.setState({
-        currtask: e.target.value
-    })
-  }
+      currtask: e.target.value,
+    });
+  };
 
-  addTask=()=>{
+  addTask = () => {
     this.setState({
-        tasks: [...this.state.tasks,this.state.currtask]
-    })
-  }
+      tasks: [
+        ...this.state.tasks,
+        { id: this.state.tasks.length + 1, task: this.state.currtask },
+      ],
+    });
+  };
 
+  handleDelete = (id) => {
+    let narr = this.state.tasks.filter((taskobj) => {
+      return taskobj.id != id;
+    });
+    this.setState({
+      tasks: [...narr],
+    });
+  };
+
+  add = (event) => {
+    if (event.key == "Enter") {
+      this.addTask();
+    }
+  };
 
   render() {
     return (
-      <div>
-        <input type="text" placeholder="Enter Your Task" onChange={this.handleChanges}/>
+      <div className="main-div">
+        <input
+          type="text"
+          placeholder="Enter Your Task"
+          onChange={this.handleChanges}
+          onKeyPress={this.add}
+        />
         <button onClick={this.addTask}>ADD</button>
-        {
-            this.state.tasks.map((task) => {
-                return (
-                <li>
-                    <p>{task}</p>
-                    <button>DELETE</button>
-                </li>
+        <div>
+          {this.state.tasks.map((taskobj, idx) => {
+            return (
+              <li key={taskobj.id}>
+                <p>{`${idx + 1} ${taskobj.task}`}</p>
+                <button onClick={() => this.handleDelete(taskobj.id)}>
+                  DELETE
+                </button>
+              </li>
             );
-          })
-        }
+          })}
+        </div>
       </div>
     );
   }
