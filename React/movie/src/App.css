@@ -3,6 +3,30 @@
   padding: 0%;
   box-sizing:border-box;
 }
+
+.banner-card{
+  background-color: white;
+  width:100vw;
+}
+.banner-img{
+  height:70vh;
+  width:100%;
+}
+
+.banner-title{
+  color:rgb(228, 18, 18);
+  position:absolute;
+  top:55vh;
+  left:5vw;
+}
+
+.banner-text{
+  color:rgb(66, 6, 6);
+  position:absolute;
+  top:60vh;
+  left:5vw;
+}
+
 img{
   width: 100vw;
   height: 80vh;
@@ -46,6 +70,11 @@ img{
 }
 
 .button-wrapper, .trending{
+  display: flex;
+  justify-content: center;
+}
+
+.pagination{
   display: flex;
   justify-content: center;
 }
