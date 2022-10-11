@@ -8,7 +8,7 @@ export default class Banner extends Component {
     }
   }
   async componentDidMount() {
-    console.log("CDM is called ");
+    //console.log("CDM is called ");
     // let res = await fetch(
     //   "https://api.themoviedb.org/3/movie/popular?api_key=1749ee86927c862e6ac40360e3eb8c0d&language=en-US&page=2"
     // );
@@ -16,7 +16,7 @@ export default class Banner extends Component {
     let data = await axios.get(
       "https://api.themoviedb.org/3/movie/popular?api_key=1749ee86927c862e6ac40360e3eb8c0d&language=en-US&page=1"
     );
-    console.log(data.data);
+    //console.log(data.data);
     this.setState({
       movies: [...data.data.results],
     });
