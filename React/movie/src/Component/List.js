@@ -109,14 +109,14 @@ export default class List extends Component {
     console.log("qwerty", JSON.parse(localStorage.getItem("movies")));
     // let allMovies = movies.results;
     return (
-      <>
+      <><div>
         {this.state.movies.length == 0 ? (
           <div class="spinner-border text-info" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
         ) : (
           <>
-            <div>
+            <div style={{backgroundColor: "darkgrey"}}>
               <h3 className="trending display-3">Trending</h3>
               <div className="movies-list">
                 {this.state.movies.map((movieObj) => {
@@ -152,7 +152,7 @@ export default class List extends Component {
                   );
                 })}
               </div>
-            </div>
+            
             <nav aria-label="Page navigation example" className="pagination">
               <ul className="pagination">
                 <li className="page-item" onClick={this.handlePrevPage}>
@@ -166,8 +166,10 @@ export default class List extends Component {
                 </li>
               </ul>
             </nav>
+            </div>
           </>
         )}
+        </div>
       </>
     );
   }

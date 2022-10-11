@@ -10,11 +10,11 @@ export default class Navbar extends Component {
           justifyContent: "center",
           alignItems: "center",
           padding: "1rem",
-          background: "lightblue"
+          background: "darkgrey"
         }}
       >
-        <Link to="/"><h1 >Movie App</h1></Link>
-        <Link to="/fav"><h2 style={{marginLeft:"2rem"}}>Favourites</h2></Link>
+        <Link to="/"><h1 style={{color:"black",textDecoration: 'inherit'}}>Movie App</h1></Link>
+        <Link to="/fav"><h2 style={{marginLeft:"2rem", color:"black", textDecoration: 'inherit'}}>Favourites</h2></Link>
       </div>
     );
   }
